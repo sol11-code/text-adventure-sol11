@@ -22,7 +22,7 @@ function showTextNode(textNodeIndex) {
             const button = document.createElement('button');
             button.innerText = option.text;
             button.classList.add('choice');
-            button.addEventListener('click', () => selectOption(option));
+            button.addEventListener('click', () => chooseOption(option));
             storyButtons.appendChild(button);
         }
     })
