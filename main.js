@@ -4,6 +4,7 @@ const storyButtons = document.getElementById('button-container')
 
 let state = {};
 
+//when the story starts, the text node that will be displayed is id #1
 function startStory() {
     state = {};
     showTextNode(1);
@@ -18,7 +19,7 @@ function chooseOption(option) {
 
 }
 
-
+//story text and choices are stored inside this array
 const storyNodes = [
     {
         id: 1,
