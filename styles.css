@@ -11,6 +11,13 @@ body {
     font-family: "bellota text";
 }
 
+#mechanics {
+    padding: 5px;
+    border: black 1px solid;
+    display: flex;
+    justify-content: space-around;
+}
+
 #story-container {
     background-color: white;
     padding: 1em;
