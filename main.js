@@ -3,6 +3,7 @@ const storyText = document.getElementById('text');
 const storyButtons = document.getElementById('button-container');
 const health = document.getElementById('health');
 const combat = document.getElementById('combat');
+const inventory = document.getElementById('inventory');
 
 //empty object
 let state = {};
@@ -34,13 +35,14 @@ function showTextNode(textNodeIndex) {
 
 //displays all available choices
 function showChoice(option) {
-    return true;
+    return option.requiredState == null || option.requiredState(state);
 }
 
 //when you pick a choice, the next text will appear
 function pickChoice(option) {
-    const next = option.nextText;
-    showTextNode(next);
+    const nextTextId = option.nextText;
+    state = Object.assign(state, option.setState);
+    showTextNode(nextTextId);
 }
 
 //story text and choices are stored inside this array
@@ -197,8 +199,20 @@ const storyNodes = [
         text: "A white cat which seems harmless stands in front of you. Will you intervene?",
         options: [
             {
-
+                text: 'Yes',
+                nextText: 20
             },
+        ]
+    },
+    {
+        id: 20,
+        text: '“Meow!” The white cat quickly and happily consumes the treat you gently handed to it, and it walks somewhere, suggesting you follow it. You follow it for a few seconds until it points its paw to a dusty key laying on a dirt patch.',
+        options: [
+            {
+                text: 'Take key',
+                setState: { key: true },
+                nextText: 9
+            }
         ]
     },
     {
@@ -211,6 +225,8 @@ const storyNodes = [
             },
             {
                 text: 'Unlock',
+                requiredState: (state) => state.key,
+                setState: { key: false },
                 nextText: 10
             } 
         ]
@@ -282,8 +298,7 @@ const storyNodes = [
                 nextText: 1
             },
         ]
-    },
-
+    }
 ]
 
 //starts the story by displaying the first text and choices
