@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "bellota text";
 }
 
 body {
     background-color: aliceblue;
-    font-family: "bellota text";
 }
 
 #mechanics {
@@ -24,12 +24,19 @@ body {
     margin: 1em;
 }
 
+#button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 button {
     border: none;
     padding: 5px;
+    background: transparent;
 }
 
 button:hover {
     background-color: black;
     color: white;
+    transition: 0.2s
 }

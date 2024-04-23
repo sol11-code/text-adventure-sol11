@@ -68,7 +68,7 @@ const storyNodes = [
     },
     {
         id: 2,
-        text: 'You search everywhere in your room, including your cat’s usual sleeping place, your desk, closet, etc.. You are about to give up until you spot a tiny sticky note on your door. “I stole your cat, come see me”, you quietly read.',
+        text: 'You search everywhere in your room, including your cat’s usual sleeping place, your desk, closet, etc.. You are about to give up until you spot a tiny sticky note on your door. \n “I stole your cat, come see me”, you quietly read.',
         options: [
             {
                 text: 'Escape',
@@ -78,7 +78,7 @@ const storyNodes = [
     },
     {
         id: 3,
-        text: 'Hero lifts up their bedroom window on their left, jumps out of it, and runs for their life. After running for some time, they encounter a strange-looking stranger. What are they doing in the alley?',
+        text: 'You lift up their bedroom window on your left, jump out of it, and run for your life. After running for some time, you encounter a strange-looking stranger. What are they doing in the alley?',
         options: [
             {
                 text: 'Ignore',
@@ -92,7 +92,7 @@ const storyNodes = [
     },
     {
         id: 16,
-        text: "Hero questions after looking around the room. “WHERE IS MY CAT!!!!???” The hero screams very loudly that everyone in the neighborhood can hear them. A cool fluffy white cat magically appears in front of Hero and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” Hero is confused. “What do you mean?” White cat disappears.",
+        text: "Hero questions after looking around the room. \n “WHERE IS MY CAT!!!!???” The hero screams very loudly that everyone in the neighborhood can hear them. \n A cool fluffy white cat magically appears in front of Hero and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” \n Hero is confused. “What do you mean?” \n White cat disappears.",
         options: [
             {
                 text: 'Escape',
