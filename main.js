@@ -3,6 +3,7 @@ const storyText = document.getElementById('text');
 const storyButtons = document.getElementById('button-container');
 const health = document.getElementById('health');
 const combat = document.getElementById('combat');
+const inventory = document.getElementById('inventory');
 
 //empty object
 let state = {};
@@ -34,13 +35,14 @@ function showTextNode(textNodeIndex) {
 
 //displays all available choices
 function showChoice(option) {
-    return true;
+    return option.requiredState == null || option.requiredState(state);
 }
 
 //when you pick a choice, the next text will appear
 function pickChoice(option) {
-    const next = option.nextText;
-    showTextNode(next);
+    const nextTextId = option.nextText;
+    state = Object.assign(state, option.setState);
+    showTextNode(nextTextId);
 }
 
 //story text and choices are stored inside this array
@@ -66,7 +68,7 @@ const storyNodes = [
     },
     {
         id: 2,
-        text: 'You search everywhere in your room, including your cat’s usual sleeping place, your desk, closet, etc.. You are about to give up until you spot a tiny sticky note on your door. “I stole your cat, come see me”, you quietly read.',
+        text: 'You search everywhere in your room, including your cat’s usual sleeping place, your desk, closet, etc.. You are about to give up until you spot a tiny sticky note on your door. \n “I stole your cat, come see me”, you quietly read.',
         options: [
             {
                 text: 'Escape',
@@ -76,7 +78,7 @@ const storyNodes = [
     },
     {
         id: 3,
-        text: 'Hero lifts up their bedroom window on their left, jumps out of it, and runs for their life. After running for some time, they encounter a strange-looking stranger. What are they doing in the alley?',
+        text: 'You lift up their bedroom window on your left, jump out of it, and run for your life. After running for some time, you encounter a strange-looking stranger. What are they doing in the alley?',
         options: [
             {
                 text: 'Ignore',
@@ -90,7 +92,7 @@ const storyNodes = [
     },
     {
         id: 16,
-        text: "Hero questions after looking around the room. “WHERE IS MY CAT!!!!???” The hero screams very loudly that everyone in the neighborhood can hear them. A cool fluffy white cat magically appears in front of Hero and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” Hero is confused. “What do you mean?” White cat disappears.",
+        text: "Hero questions after looking around the room. \n “WHERE IS MY CAT!!!!???” The hero screams very loudly that everyone in the neighborhood can hear them. \n A cool fluffy white cat magically appears in front of Hero and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” \n Hero is confused. “What do you mean?” \n White cat disappears.",
         options: [
             {
                 text: 'Escape',
@@ -128,7 +130,7 @@ const storyNodes = [
     },
     {
         id: 4,
-        text: '"Hey you. Yes you. Come here." Hero walks up to this stranger who is probably a professor and introduces themself. “My name is Hero. Yeah, I have no idea why that is my name.” “Well nice to meet you, Hero.My name is Wizard.” “If you are a wizard, why are you dressed like a professor ?” “It’s a disguise. Look, I know what you are looking for.” “What is it ? I bet you can’t read my mind.” “You are looking for your beloved cat that suddenly went missing.” “Wow! You really ARE a wizard!” “Yep! And I’ll help you with finding it.What do you think? A nice offer ?”',
+        text: '"Hey you. Yes you. Come here." \n  Hero walks up to this stranger who is probably a professor and introduces themself. “My name is Hero. Yeah, I have no idea why that is my name.” \n “Well nice to meet you, Hero. My name is Wizard.” \n “If you are a wizard, why are you dressed like a professor?” \n “It’s a disguise. Look, I know what you are looking for.” \n “What is it? I bet you can’t read my mind.” \n “You are looking for your beloved cat that suddenly went missing.” \n “Wow! You really ARE a wizard!” \n “Yep! And I’ll help you with finding it. What do you think? A nice offer ?”',
         options: [
             {
                 text: 'Yes',
@@ -152,7 +154,7 @@ const storyNodes = [
     },
     {
         id: 19,
-        text: '“You know what, Wizard? I don’t trust you. If you are really a wizard, you would look like a wizard. I’m leaving.” “Wow. That wasn’t very nice. You don’t deserve to live up to your name.” The wizard takes out a worn out book, opens it to a page, and writes down “Hero.” As the wizard crosses out your name, you notice a red laser heading your direction, mercilessly striking you. You drop to the concrete ground and die.',
+        text: '“You know what, Wizard? I don’t trust you. If you are really a wizard, you would look like a wizard. I’m leaving.” \n “Wow. That wasn’t very nice. You don’t deserve to live up to your name.” The wizard takes out a worn out book, opens it to a page, and writes down “Hero.” As the wizard crosses out your name, you notice a red laser heading your direction, mercilessly striking you. You drop to the concrete ground and die.',
         options: [
             {
                 text: 'Incomplete End',
@@ -197,8 +199,20 @@ const storyNodes = [
         text: "A white cat which seems harmless stands in front of you. Will you intervene?",
         options: [
             {
-
+                text: 'Yes',
+                nextText: 20
             },
+        ]
+    },
+    {
+        id: 20,
+        text: '“Meow!” The white cat quickly and happily consumes the treat you gently handed to it, and it walks somewhere, suggesting you follow it. You follow it for a few seconds until it points its paw to a dusty key laying on a dirt patch.',
+        options: [
+            {
+                text: 'Take key',
+                setState: { key: true },
+                nextText: 9
+            }
         ]
     },
     {
@@ -211,6 +225,8 @@ const storyNodes = [
             },
             {
                 text: 'Unlock',
+                requiredState: (state) => state.key,
+                setState: { key: false },
                 nextText: 10
             } 
         ]
@@ -282,8 +298,7 @@ const storyNodes = [
                 nextText: 1
             },
         ]
-    },
-
+    }
 ]
 
 //starts the story by displaying the first text and choices

@@ -8,11 +8,7 @@
 }
 
 body {
-    background-color: #3f4f78;
-}
-
-h2 {
-    text-align: center;
+    background-color: aliceblue;
 }
 
 #mechanics {
@@ -36,12 +32,11 @@ h2 {
 button {
     border: solid 1px black;
     padding: 5px;
-    background-color: transparent;
+    background: transparent;
 }
 
 button:hover {
-    background-color: #cca677;
-    border-radius: 2.5px;
-    transition: 0.2s;
-    color: rgb(255, 255, 255);
+    background-color: black;
+    color: white;
+    transition: 0.2s
 }
