@@ -4,6 +4,8 @@ const storyButtons = document.getElementById('button-container');
 const health = document.getElementById('health');
 const combat = document.getElementById('combat');
 const inventory = document.getElementById('inventory');
+const summary = document.getElementById('summary');
+
 
 //empty object
 let state = {};
@@ -12,6 +14,14 @@ let state = {};
 function startStory() {
     state = {};
     showTextNode(1);
+}
+
+//writes every choice you make into a summary
+function writeStory() {
+    const text = document.createElement('p');
+    const nextText = document.createTextNode(storyText.innerText);
+    text.appendChild(nextText);
+    summary.appendChild(text);
 }
 
 //shows story text and all available choices
@@ -43,6 +53,7 @@ function pickChoice(option) {
     const nextTextId = option.nextText;
     state = Object.assign(state, option.setState);
     showTextNode(nextTextId);
+    writeStory();
 }
 
 //story text and choices are stored inside this array
