@@ -11,26 +11,36 @@ body {
     background-color: aliceblue;
 }
 
+h2, #mechanics, #story-container, #img-container {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border: rgba(0, 0, 0, 0.412) 2px solid;
+}
+
+h2 {
+    text-align: center;
+}
+
 #mechanics {
     padding: 5px;
-    border: black 1px solid;
     display: flex;
     justify-content: space-around;
 }
 
-#story-container {
-    background-color: white;
-    padding: 1em;
-    margin: 1em;
+#img-container {
+    text-align: center;
+    border: solid 2px rgba(0, 0, 0, 0.412);
 }
 
 #button-container {
     display: flex;
     justify-content: space-around;
+    margin-top: 1em;
 }
 
 button {
-    border: solid 1px black;
+    border: solid 2px rgba(0, 0, 0, 0.412);
     padding: 5px;
     background: transparent;
 }
