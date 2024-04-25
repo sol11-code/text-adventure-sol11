@@ -60,7 +60,7 @@ function pickChoice(option) {
 const storyNodes = [
     {
         id: 1,
-        text: 'You live mysteriously with their beloved cat in a small one-story home. One day, you wake up in their room at midnight. You have nothing to do. With a blink of an eye, you are reminded to find their cat. Where is their cat?',
+        text: 'You live mysteriously with your beloved cat in a small one-story home. You really don’t like going outside, so you enjoy your solitary life indoors. One day, you wake up in your room at midnight. You have nothing to do; therefore, you look at your cat’s bed. Typically, it sits there comfy at night, but now you see only an empty bed. You first search in your room, of course, and that goes unsuccessful. You ponder to yourself: this means it is either outside, or it is missing. What will you do?',
         options: [
             {
                 text: 'Search',
@@ -103,7 +103,7 @@ const storyNodes = [
     },
     {
         id: 16,
-        text: "Hero questions after looking around the room. \n “WHERE IS MY CAT!!!!???” The hero screams very loudly that everyone in the neighborhood can hear them. \n A cool fluffy white cat magically appears in front of Hero and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” \n Hero is confused. “What do you mean?” \n White cat disappears.",
+        text: 'You question after intensely looking around your house, “WHERE IS MY CAT!!!!???” Then, you scream very loudly that everyone in the neighborhood can hear you. A cool fluffy white cat magically appears in front of you and lets out a random “Meow”, which translates to, “Hello, what you just did was very unprofessional. Therefore, prepare to have a mob of angry neighbors raiding your house.” You become confused. “What do you mean?” Without any response, the white cat disappears. Should you believe it?',
         options: [
             {
                 text: 'Escape',
@@ -117,7 +117,7 @@ const storyNodes = [
     },
     {
         id: 17,
-        text: "“Whatever”, you say as you begin to head back to your room. Then you hear a very loud crowd behind you, standing right outside your front door. Hero gets raided, and dies.",
+        text: '“Whatever. I’m too lazy”, you say as you begin to head back to your room. Then you hear a very loud crowd behind you, standing right outside your front door. You get raided, and before you could turn around and find somewhere to hide, you collapse and die.',
         options: [
             {
                 text: 'End',
@@ -141,7 +141,7 @@ const storyNodes = [
     },
     {
         id: 4,
-        text: '"Hey you. Yes you. Come here." \n  Hero walks up to this stranger who is probably a professor and introduces themself. “My name is Hero. Yeah, I have no idea why that is my name.” \n “Well nice to meet you, Hero. My name is Wizard.” \n “If you are a wizard, why are you dressed like a professor?” \n “It’s a disguise. Look, I know what you are looking for.” \n “What is it? I bet you can’t read my mind.” \n “You are looking for your beloved cat that suddenly went missing.” \n “Wow! You really ARE a wizard!” \n “Yep! And I’ll help you with finding it. What do you think? A nice offer ?”',
+        text: '"Hey you. Yes you. Come here." \n  You walk up to this stranger who is probably a professor and introduce yourself. “My name is Hero. Yeah, I have no idea why that is my name.” \n “Well nice to meet you, Hero. My name is Wizard.” \n “If you are a wizard, why are you dressed like a professor?” \n “It’s a disguise. Look, I know what you are looking for.” \n “What is it? I bet you can’t read my mind.” \n “You are looking for your beloved cat that suddenly went missing.” \n “Wow! You really ARE a wizard!” \n “Yep! And I’ll help you with finding it. What do you think? A nice offer ?”',
         options: [
             {
                 text: 'Yes',
@@ -165,7 +165,7 @@ const storyNodes = [
     },
     {
         id: 19,
-        text: '“You know what, Wizard? I don’t trust you. If you are really a wizard, you would look like a wizard. I’m leaving.” \n “Wow. That wasn’t very nice. You don’t deserve to live up to your name.” The wizard takes out a worn out book, opens it to a page, and writes down “Hero.” As the wizard crosses out your name, you notice a red laser heading your direction, mercilessly striking you. You drop to the concrete ground and die.',
+        text: 'You think the wizard is trying to deceive you, so you confront them. “You know what, Wizard? I don’t trust you. If you are really a wizard, you would look like a wizard. I’m leaving.” \n The wizard goes from a smile to a frown in an instant. “Wow. That wasn’t very nice. You don’t deserve to live up to your name.” Then, the wizard takes out a worn out book, opens it to a page, and writes down “Hero.” As the wizard crosses out your name, you notice a red laser heading your direction, mercilessly striking you. You drop to the concrete ground, forever laying there motionless.',
         options: [
             {
                 text: 'Incomplete End',
