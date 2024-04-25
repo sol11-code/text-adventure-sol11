@@ -82,3 +82,17 @@ h2 {
     display: none;
     overflow: hidden;
 }
+
+/*mobile*/
+@media only screen and (max-width: 640px) {
+
+#button-container {
+    width: 100%;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+
+}
