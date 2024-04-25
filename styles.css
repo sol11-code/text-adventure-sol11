@@ -33,20 +33,52 @@ h2 {
     border: solid 2px rgba(0, 0, 0, 0.412);
 }
 
+/*choice buttons*/
 #button-container {
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
 }
 
-button {
+.choice {
     border: solid 2px rgba(0, 0, 0, 0.412);
     padding: 5px;
     background: transparent;
 }
 
-button:hover {
+.choice:hover {
     background-color: black;
     color: white;
-    transition: 0.2s
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/*collapsible summary*/
+#coll-summary {
+    margin: 1em;
+}
+
+.summary {
+    background-color: white;
+    margin: 0em;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    border: solid 2px rgba(0, 0, 0, 0.412);
+}
+
+.summary:hover {
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.summary-text {
+    background-color: white;
+    border: solid 2px rgba(0, 0, 0, 0.412);
+    margin: 0em;
+    padding: 1em;
+    display: none;
+    overflow: hidden;
 }

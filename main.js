@@ -4,7 +4,7 @@ const storyButtons = document.getElementById('button-container');
 const health = document.getElementById('health');
 const combat = document.getElementById('combat');
 const inventory = document.getElementById('inventory');
-const summary = document.getElementById('summary');
+const summary = document.getElementById('summary-text');
 
 
 //empty object
@@ -239,7 +239,7 @@ const storyNodes = [
                 requiredState: (state) => state.key,
                 setState: { key: false },
                 nextText: 10
-            } 
+            }
         ]
     },
     {
@@ -314,3 +314,19 @@ const storyNodes = [
 
 //starts the story by displaying the first text and choices
 startStory();
+
+//allows collapsible to display summary when clicked on
+const collapsible = document.getElementsByClassName('summary');
+var i;
+
+for (i = 0; i < collapsible.length; i++) {
+    collapsible[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+        let summaryText = this.nextElementSibling;
+        if (summaryText.style.display === 'block') {
+            summaryText.style.display = 'none';
+        } else {
+            summaryText.style.display = 'block';
+        }
+    });
+}
