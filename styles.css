@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 * {
     margin: 0;
@@ -8,18 +9,21 @@
 }
 
 body {
-    background-color: aliceblue;
+    background-color: #E5DDC8;
+    margin: 1em;
 }
 
 h2, #mechanics, #story-container, #img-container {
-    background-color: white;
-    padding: 1em;
-    margin: 1em;
+    background-color: #ADB78E;
     border: rgba(0, 0, 0, 0.412) 2px solid;
+    padding: 1em;
+    margin: 1%;
 }
 
 h2 {
     text-align: center;
+    font-family: 'dancing script';
+    font-size: 2em;
 }
 
 #mechanics {
@@ -28,9 +32,19 @@ h2 {
     justify-content: space-around;
 }
 
+#container1 {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #img-container {
     text-align: center;
     border: solid 2px rgba(0, 0, 0, 0.412);
+}
+
+#story-container {
+    font-size: 150%;
 }
 
 /*choice buttons*/
@@ -38,12 +52,14 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
+    background-color: #ADB78E;
 }
 
 .choice {
     border: solid 2px rgba(0, 0, 0, 0.412);
     padding: 5px;
     background: transparent;
+    font-size: 100%;
 }
 
 .choice:hover {
@@ -54,17 +70,15 @@ h2 {
 }
 
 /*collapsible summary*/
-#coll-summary {
-    margin: 1em;
-}
-
 .summary {
-    background-color: white;
-    margin: 0em;
+    background-color: #ADB78E;
+    margin: 0%;
     padding: 1em;
     width: 100%;
     text-align: left;
     border: solid 2px rgba(0, 0, 0, 0.412);
+    display: flex;
+    justify-content: space-between;
 }
 
 .summary:hover {
@@ -75,9 +89,10 @@ h2 {
 }
 
 .summary-text {
-    background-color: white;
+    background-color: black;
+    color: white;
     border: solid 2px rgba(0, 0, 0, 0.412);
-    margin: 0em;
+    margin: 0%;
     padding: 1em;
     display: none;
     overflow: hidden;
@@ -93,6 +108,10 @@ h2 {
 
 img {
     width: 100%;
+}
+
+#container1 {
+    flex-direction: column;
 }
 
 }

@@ -11,24 +11,33 @@
 
 <body>
     <h2>Hero's Journey</h2>
-    <div id="mechanics">
-        <p>HP: <span id="health">-</span></p>
-        <p>Combat: <span id="combat">-</span></p>
-        <p>Inventory: <span id="inventory">-</span></p>
-    </div>
-    <div id="img-container">
-        <img src="img/forestcat.jpg" alt="story image">
-    </div>
-    <div id="story-container">
-        <p id="text">Which option will you select? Choose <em>wisely</em>.</p>
-        <div id="button-container">
-            <button class="choice">Option 1</button>
-            <button class="choice">Option 2</button>
-            <button class="choice">Option 3</button>
+    
+    <div id="container1">
+        <div id="img-container">
+            <img src="img/forestcat.jpg" alt="story image">
+        </div>
+        <div id="container2">
+            <div id="mechanics">
+                <p>HP: <span id="health">-</span></p>
+                <p>Combat: <span id="combat">-</span></p>
+                <p>Inventory: <span id="inventory">-</span></p>
+            </div>
+            <div id="story-container">
+                <p id="text">Which option will you select? Choose <em>wisely</em>.</p>
+                <div id="button-container">
+                    <button class="choice">Option 1</button>
+                    <button class="choice">Option 2</button>
+                    <button class="choice">Option 3</button>
+                </div>
+            </div>
         </div>
     </div>
+
     <div id="coll-summary">
-        <button type="button" id="summary" class="summary">Summary</button>
+        <button type="button" id="summary" class="summary">
+            <p>Summary</p>
+            <p>+</p>
+        </button>
         <div class="summary-text" id="summary-text">
         </div>
     </div>
