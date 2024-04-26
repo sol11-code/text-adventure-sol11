@@ -15,9 +15,8 @@ body {
 
 h2, #mechanics, #story-container, #img-container {
     background-color: #ADB78E;
-    border: rgba(0, 0, 0, 0.412) 2px solid;
+    border: rgba(0, 0, 0, 0.412) 3px solid;
     padding: 1em;
-    margin: 1%;
 }
 
 h2 {
@@ -26,25 +25,33 @@ h2 {
     font-size: 2em;
 }
 
+#container1 {
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+    margin: 1%;
+}
+
+#container2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#img-container {
+    text-align: center;
+    border: solid 3px rgba(0, 0, 0, 0.412);
+}
+
 #mechanics {
     padding: 5px;
     display: flex;
     justify-content: space-around;
 }
 
-#container1 {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#img-container {
-    text-align: center;
-    border: solid 2px rgba(0, 0, 0, 0.412);
-}
-
 #story-container {
     font-size: 150%;
+    height: 100%;
 }
 
 /*choice buttons*/
@@ -56,7 +63,7 @@ h2 {
 }
 
 .choice {
-    border: solid 2px rgba(0, 0, 0, 0.412);
+    border: solid 3px rgba(0, 0, 0, 0.412);
     padding: 5px;
     background: transparent;
     font-size: 100%;
@@ -76,7 +83,7 @@ h2 {
     padding: 1em;
     width: 100%;
     text-align: left;
-    border: solid 2px rgba(0, 0, 0, 0.412);
+    border: solid 3px rgba(0, 0, 0, 0.412);
     display: flex;
     justify-content: space-between;
 }
@@ -91,7 +98,7 @@ h2 {
 .summary-text {
     background-color: black;
     color: white;
-    border: solid 2px rgba(0, 0, 0, 0.412);
+    border: solid 3px rgba(0, 0, 0, 0.412);
     margin: 0%;
     padding: 1em;
     display: none;
@@ -101,17 +108,20 @@ h2 {
 /*mobile*/
 @media only screen and (max-width: 640px) {
 
-#button-container {
-    width: 100%;
-    flex-direction: column;
-}
+    #button-container {
+        width: 100%;
+        flex-direction: column;
+    }
 
-img {
-    width: 100%;
-}
+    img {
+        width: 100%;
+    }
 
-#container1 {
-    flex-direction: column;
-}
+    #container1 {
+        flex-direction: column;
+    }
 
+    #story-container, .choice {
+        font-size: 100%;
+    }
 }
