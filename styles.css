@@ -10,26 +10,27 @@
 
 body {
     background-color: #E5DDC8;
-    margin: 1em;
 }
 
-h2, #mechanics, #story-container, #img-container {
+h2, #mechanics, #story-container {
     background-color: #ADB78E;
     border: rgba(0, 0, 0, 0.412) 3px solid;
-    padding: 1em;
 }
 
 h2 {
     text-align: center;
     font-family: 'dancing script';
     font-size: 2em;
+    padding: 1%;
+    margin: 1% 1% 0 1%;
 }
 
 #container1 {
     display: flex;
     flex-direction: row;
     justify-items: stretch;
-    margin: 1%;
+    padding: 1%;
+    gap: 1%;
 }
 
 #container2 {
@@ -40,18 +41,21 @@ h2 {
 
 #img-container {
     text-align: center;
-    border: solid 3px rgba(0, 0, 0, 0.412);
+    border: rgb(102 108 84) 3px solid;
 }
 
 #mechanics {
     padding: 5px;
     display: flex;
     justify-content: space-around;
+    font-size: 150%;
+    border-bottom: none;
 }
 
 #story-container {
     font-size: 150%;
     height: 100%;
+    padding: 1em;
 }
 
 /*choice buttons*/
@@ -70,28 +74,31 @@ h2 {
 }
 
 .choice:hover {
-    background-color: black;
-    color: white;
-    transition: 0.2s;
+    background: linear-gradient(-45deg, #C8F4F9, #3CACAE);
+    background-size: 200%;
+    border: solid 3px #266a6a;
+    color: #163e3e;
     cursor: pointer;
 }
 
 /*collapsible summary*/
 .summary {
     background-color: #ADB78E;
-    margin: 0%;
-    padding: 1em;
-    width: 100%;
-    text-align: left;
+    margin-left: 1%;
+    padding: 0.5%;
+    width: 98%;
+    font-size: 150%;
     border: solid 3px rgba(0, 0, 0, 0.412);
     display: flex;
     justify-content: space-between;
+    justify-items: flex-start;
 }
 
 .summary:hover {
-    background-color: black;
-    color: white;
-    transition: 0.2s;
+    background: linear-gradient(-90deg, #C8F4F9, #3CACAE);
+    background-size: 200%;
+    border: solid 3px #266a6a;
+    color: #163e3e;
     cursor: pointer;
 }
 
@@ -99,7 +106,7 @@ h2 {
     background-color: black;
     color: white;
     border: solid 3px rgba(0, 0, 0, 0.412);
-    margin: 0%;
+    margin: 0 1% 0 1%;
     padding: 1em;
     display: none;
     overflow: hidden;
@@ -121,7 +128,7 @@ h2 {
         flex-direction: column;
     }
 
-    #story-container, .choice {
+    #story-container, #mechanics, .choice, .summary {
         font-size: 100%;
     }
 }
